@@ -1,12 +1,13 @@
 ---
 layout: post
 title:  "Executor 框架"
-categories: Java
+categories: Java Java并发编程
 tags: 多线程 并发编程 Java
 ---
 
 * content
 {:toc}
+
 
 ## Executor 框架
 
