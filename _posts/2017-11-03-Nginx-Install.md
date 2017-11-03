@@ -25,7 +25,9 @@ yum -y install gcc openssl-devel pcre-devel zlib-devel
 
 
 
-##### 2. **创建用户和用户组。为了方便nginx运行而不影响linux安全**
+##### 2. **创建用户和用户组。**
+
+* **为了方便nginx运行而不影响linux安全**
 
 - 创建组：groupadd -r nginx
 - 创建用户：useradd -r -g nginx -M nginx
