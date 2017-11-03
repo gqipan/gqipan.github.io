@@ -14,6 +14,7 @@ url: "https://gqipan.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/
 
 # other links
+# other links
 twitter_username: 
 facebook_username: 
 github_username:  gqipan
@@ -28,16 +29,17 @@ description_footer: 写着代码看风景！
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: 
-disqus_shortname: gqipan
+duoshuo_shortname:
 livere_shortname: 
+wangyiyun_shortname:
+disqus_shortname:
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
 baidu_tongji_id: 5e92260e84d397eec692a6c5ba245fc0
-google_analytics_id: # google 分析追踪id
+google_analytics_id: 
 
 # Build settings
 markdown: kramdown
@@ -57,5 +59,5 @@ tag_dir: tag/
 excerpt_separator: "\n\n\n\n"
 
 # paginate
-plugins: [jekyll-paginate]
-paginate: 6
+gems: [jekyll-paginate]
+paginate: 10

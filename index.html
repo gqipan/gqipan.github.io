@@ -8,6 +8,39 @@ layout: default
         <small>游子久伫立，极目望一径。蜿蜒复曲折，隐于丛林中。我选另一途，合理亦公正。草密人迹罕，正待人通行。足迹踏过处，两路皆相同。 两路林中伸，落叶无人踪。我选一路走，深知路无穷。我疑从今后，能否转回程。 数十年之后，谈起常叹息。林中两路分，一路人迹稀。我独进此路，境遇乃相异。</small>
         <hr>
         <ul>
+            {% if paginator.page == 1 %}
+            {% for post in site.posts %}
+            {% if post.top == true %}
+              <li>
+                <h2>
+                  <!-- 需要置顶的文章只要在 加上 top: true 属性值-->
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><span style="color: red; padding-right: 4px">[置顶]</span>{{ post.title }}</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
+                    </div>
+                    <div class="label-card">
+                        {% if post.author %}<i class="fa fa-user"></i>{{ post.author }}
+                        {% endif %}
+                    </div>
+                    <div class="label-card">
+                        {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
+                    </div>
+
+                    <div class="label-card">
+                    {% include category.html %}
+                    </div>
+
+                    <div class="label-card">
+                    {% include tag.html %}
+                    </div>
+                </div>
+                <hr>
+              </li>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
             {% for post in paginator.posts %}
               <li>
                 <h2>
@@ -34,7 +67,7 @@ layout: default
                     </div>
                 </div>
                 <div class="excerpt">
-                    {{post.excerpt}}
+                    {{ post.content | strip_html | truncate:150 }}
                 </div>
                 <div class="read-all">
                     <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -50,7 +83,7 @@ layout: default
         <div class="pagination">
           {% if paginator.previous_page %}
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><i class="fa fa-angle-left"></i></a>
+            <a href="{{ paginator.previous_page_path }}" class="previous"><i class="fa fa-angle-left"></i></a>
           {% else %}
             <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
             <span class="previous disable"><i class="fa fa-angle-left"></i></span>
@@ -58,7 +91,7 @@ layout: default
           <span class="page_number ">{{ paginator.page }}/{{ paginator.total_pages }}</span>
           {% if paginator.next_page %}
             <a href="{{ paginator.next_page_path }}" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="{{ site.baseurl }}/page{{ paginator.total_pages }}" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page{{ paginator.total_pages }}" class="next"><i class="fa fa-angle-double-right"></i></a>
           {% else %}
             <span class="next disable"><i class="fa fa-angle-right"></i></span>
             <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
@@ -75,7 +108,7 @@ layout: default
                 </div>
                 <ul class="content-ul" recent>
                     {% for post in site.posts offset: 0 limit: 10  %}
-                        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -144,15 +177,29 @@ layout: default
                 </div>
             </div>
 
-            <!-- <div class="side">
+            <div class="side">
                 <div>
-                    <i class="fa fa-external-link"></i>
-                    Links
+                    <i class="fa fa-smile-o "></i>
+                    Friends
                 </div>
                 <ul  class="content-ul">
-
+                    <div style="padding-bottom: 10px">
+                       <a target="_blank" href=""></a>
+                        <br>
+                        <a target="_blank" href=""></a>
+                    </div>
                 </ul>
-            </div> -->
+            </div>
+    
+            <div class="side">
+                <div>
+                    <i class="fa fa-globe"></i>
+                    Visitors
+                </div>
+                <div>
+                    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m5rvxot0hr&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=lucida_sans_unicode&amp;l=0&amp;bv=100&amp;v0=20&amp;z=11&amp;lx=-480&amp;ly=40" async="async"></script>
+                </div>
+            </div>
         </div>
     </div>
 </div>
