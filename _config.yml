@@ -24,7 +24,7 @@ zhihu_username:
 linkedIn_username: 
 dribbble_username:
 
-description_footer: 写着代码看风景！
+description_footer: 随笔集
 
 # comments
 # two ways to comment, only choose one, and use your own short name
@@ -38,7 +38,7 @@ disqus_shortname:
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
-baidu_tongji_id: 5e92260e84d397eec692a6c5ba245fc0
+baidu_tongji_id: 33b4836c9773a68b7e97ce3e31cc64ba
 google_analytics_id: 
 
 # Build settings
