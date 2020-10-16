@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2.行为型模式-策略模式"
-categories: "Design-Patterns Behavioral-Design-Patterns"
+categories: "Design-Patterns"
 tags: "Strategy-Design-Patterns"
 ---
 

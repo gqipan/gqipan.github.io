@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "同步容器类和并发容器类"
-categories: Java Java并发编程
+categories: Java并发编程
 tags: 多线程 并发编程 Java
 ---
 

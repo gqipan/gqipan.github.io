@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "线程池ThreadPool"
-categories: Java Java并发编程
+categories: Java并发编程
 tags: 多线程 并发编程 Java
 ---
 

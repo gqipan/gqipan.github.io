@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "3.行为型模式-观察者模式"
-categories: "Design-Patterns Behavioral-Design-Patterns"
+categories: "Design-Patterns"
 tags: "Observer-Design-Patterns"
 ---
 
